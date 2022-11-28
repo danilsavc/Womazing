@@ -1,0 +1,206 @@
+.header {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 1.5fr 5fr 2fr 1fr;
+  grid-template-areas: "logo nav contacts bag";
+  grid-template-rows: 2fr;
+  align-items: center;
+
+  min-height: 100px;
+}
+
+.header_logo {
+  grid-area: logo;
+}
+
+.header_nav {
+  grid-area: nav;
+  justify-self: center;
+}
+
+.link {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+
+  margin-right: 45px;
+}
+
+.link:last-child {
+  margin-right: 0;
+}
+
+.linkActive {
+  font-weight: 700;
+  color: #6E9C9F;
+}
+
+.link:hover {
+  color: #6E9C9F;
+  font-weight: 700;
+}
+
+.header_contacts {
+  grid-area: contacts;
+  justify-self: center;
+
+  display: flex;
+  width: 150px;
+  justify-content: space-around;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+
+}
+
+.telephone {
+  cursor: pointer;
+}
+
+.telephone:hover {
+  opacity: 0.5;
+}
+
+.item {
+  margin-right: 16px;
+}
+
+.item:last-child {
+  margin-right: 0;
+}
+
+.header_bag {
+  grid-area: bag;
+  justify-self: end;
+}
+
+.form {
+  display: grid;
+  grid-template-rows: 105px 166px 105px;
+  grid-template-areas: "title" "inputs" "btn";
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  grid-area: title;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.inputs {
+  grid-area: inputs;
+
+  display: grid;
+  grid-template-rows: repeat(3, 51px);
+}
+
+.input {
+  width: 350px;
+
+  border: 0;
+  border-bottom: 1px solid black;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #868686;
+}
+
+.btn,
+.btn_success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  grid-area: btn;
+
+  width: 351px;
+  height: 68px;
+  background: #6E9C9F;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 138.9%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.succes {
+  display: grid;
+  grid-template-rows: repeat(2, 140px);
+  grid-template-areas: "title_success" "btn_success";
+}
+
+.title_success {
+  grid-area: title_success;
+  align-self: center;
+  justify-self: center;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.btn_success {
+  grid-area: btn_success;
+  align-self: center;
+  justify-self: center;
+
+  width: 351px;
+  height: 68px;
+  background: #ffffff;
+  border: 1px solid #6E9C9F;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 138.9%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #6E9C9F;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #6E9C9F;
+  border: 1px solid #6E9C9F;
+  transition: 0.5s ease;
+}
+
+.btn_success:hover {
+  background-color: #6E9C9F;
+  color: #fff;
+  transition: 0.5s ease;
+}

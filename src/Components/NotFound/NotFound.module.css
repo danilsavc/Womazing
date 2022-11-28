@@ -1,0 +1,15 @@
+.container {
+  width: 626px;
+  height: 362px;
+  overflow: hidden;
+}
+
+.content {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 352px;
+  line-height: 362px;
+  color: rgba(255, 255, 255, 0.0001);
+  border: 1px solid #436972;
+}

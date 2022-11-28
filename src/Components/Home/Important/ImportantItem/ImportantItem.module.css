@@ -1,0 +1,41 @@
+.item {
+  width: 305px;
+  height: 272px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 3fr;
+  grid-template-areas: "img" "title" "subtitle";
+}
+
+.img {
+  grid-area: img;
+  width: 63px;
+  height: 63px;
+}
+
+.title {
+  grid-area: title;
+  align-self: flex-end;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.subtitle {
+  grid-area: subtitle;
+  align-self: center;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}

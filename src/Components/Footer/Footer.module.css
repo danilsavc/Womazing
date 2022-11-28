@@ -1,0 +1,108 @@
+.footer {
+  background: #F1EADC;
+}
+
+.wrapper {
+  width: 1110px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 104px repeat(2, 1fr) 103px;
+  grid-template-areas:
+    ". . ."
+    "logo header_nav information"
+    "terms . information"
+    ". . .";
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.terms {
+  display: grid;
+  grid-area: terms;
+}
+
+.information {
+  grid-area: information;
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 40px);
+  grid-template-areas: "telephone" "email" "sn" "visa";
+
+  text-align: end;
+  align-items: center;
+}
+
+.telephone {
+  grid-area: telephone;
+}
+
+.email {
+  grid-area: email;
+}
+
+.socialNetwork {
+  grid-area: sn;
+}
+
+.visa {
+  grid-area: visa;
+  justify-self: end;
+}
+
+.header_nav {
+  grid-area: header_nav;
+  justify-self: center;
+}
+
+.terms_item {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.terms_item:nth-child(2):hover,
+.terms_item:nth-child(3):hover {
+  text-decoration: underline;
+}
+
+.link,
+.telephone,
+.email {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.link {
+  margin-right: 45px;
+}
+
+.link:last-child {
+  margin-right: 0;
+}
+
+.link:hover {
+  font-weight: 700;
+  color: #6E9C9F;
+}
+
+.linkActive {
+  font-weight: 700;
+  color: #6E9C9F;
+}
+
+.sn {
+  margin-right: 20px;
+}

@@ -1,0 +1,57 @@
+.shop {
+  display: grid;
+
+  grid-template-rows: 257px 50px 276px 1fr;
+  grid-template-areas: "title" "subtitle" "categories" "items";
+}
+
+.title {
+  grid-area: title;
+  align-self: flex-end;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.subtitle {
+  grid-area: subtitle;
+  align-self: flex-end;
+}
+
+.main {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.minor {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #919191;
+}
+
+.categories {
+  grid-area: categories;
+  align-self: center;
+}
+
+.items {
+  grid-area: items;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}

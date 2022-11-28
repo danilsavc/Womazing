@@ -1,0 +1,44 @@
+.carousel {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 585px;
+  max-height: 370px;
+}
+
+.carouselInner {
+  transition: ease 2s;
+}
+
+.caruselItem {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "title" "subtitle";
+}
+
+.title {
+  grid-area: title;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.subtitle {
+  grid-area: subtitle;
+  align-self: center;
+
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}

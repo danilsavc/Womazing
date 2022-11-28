@@ -1,0 +1,110 @@
+.girl2 {
+    position: absolute;
+    margin-left: 560px;
+    margin-top: 328px;
+}
+
+.girl3 {
+    position: absolute;
+    margin-left: 1015px;
+    margin-top: 90px;
+}
+
+.rightBlock {
+    position: absolute;
+    width: 705px;
+    height: 746px;
+    background: #F1EADC;
+    margin-left: 650px;
+    top: 0;
+}
+
+.header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr 1fr 0.5fr;
+    grid-template-areas:
+        "container girl1"
+        "container girl1"
+        "buttons girl1"
+        "bullits girl1";
+}
+
+.container {
+    grid-area: container;
+    align-self: center;
+}
+
+.buttons {
+    grid-area: buttons;
+    justify-self: center;
+
+    display: flex;
+}
+
+.button_down {
+    width: 67px;
+    height: 68px;
+    background: rgba(110, 156, 159, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button_down:hover {
+    opacity: 0.7;
+}
+
+.button_open {
+    width: 243px;
+    height: 68px;
+    background: #6E9C9F;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 138.9%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.button_open:hover {
+    border: 1px solid #6E9C9F;
+    background-color: #FFFFFF;
+    color: #6E9C9F;
+}
+
+.bullits {
+    grid-area: bullits;
+    justify-self: center;
+
+    display: grid;
+    grid-template-columns: 45px 45px 45px;
+}
+
+.bullit1,
+.bullit2,
+.bullit3 {
+    width: 30px;
+    height: 4px;
+    background: #D1D1D1;
+    justify-self: end;
+}
+
+
+
+.girl1 {
+    grid-area: girl1;
+    justify-self: end;
+}

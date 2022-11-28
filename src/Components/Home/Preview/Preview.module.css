@@ -1,0 +1,68 @@
+.preview {
+  display: grid;
+  grid-template-rows: 130px 1fr 92px 10fr 133px;
+  grid-template-areas: "." "title" "." "items" "btn";
+}
+
+.title {
+  grid-area: title;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.items {
+  grid-area: items;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container:last-child {
+  justify-self: end;
+}
+
+.container:nth-child(2) {
+  justify-self: center;
+}
+
+.btn {
+  grid-area: btn;
+  justify-self: center;
+  align-self: center;
+
+  width: 243px;
+  height: 68px;
+  border: 1px solid #6E9C9F;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnText {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 138.9%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #6E9C9F;
+}
+
+.btn:hover {
+  background-color: #6E9C9F;
+  transition: 0.5s ease;
+}
+
+.btn:hover .btnText {
+  color: #fff;
+  transition: 0.5s ease;
+}

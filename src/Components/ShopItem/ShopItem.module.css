@@ -1,0 +1,73 @@
+.item {
+  width: 350px;
+  height: 558px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas: "img" "title" "price";
+}
+
+.backgroundHover {
+  position: absolute;
+  width: 350px;
+  height: 478px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.right {
+  width: 31px;
+  height: 22px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.backgroundHover:hover {
+  background: rgba(110, 156, 159, 0.64);
+  transition: .5s ease;
+}
+
+.backgroundHover:hover .right {
+  opacity: 1;
+}
+
+.img {
+  grid-area: img;
+}
+
+.content {
+  width: 350px;
+  height: 478px;
+}
+
+.title {
+  grid-area: title;
+  justify-self: center;
+  align-self: flex-end;
+
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.price {
+  grid-area: price;
+  justify-self: center;
+  align-self: center;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #998E78;
+}

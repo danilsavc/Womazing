@@ -1,0 +1,82 @@
+.DreamTeam {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 130px 136px 1fr 130px;
+  grid-template-areas:
+    ". ."
+    "title title"
+    "carousel rightbar"
+    ". .";
+}
+
+.title {
+  grid-area: title;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.carousel {
+  grid-area: carousel;
+}
+
+.rightbar {
+  grid-area: rightbar;
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "subtitle" "text" "aboutBrand";
+}
+
+.subtitle {
+  grid-area: subtitle;
+  align-self: center;
+  justify-self: center;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.text {
+  grid-area: text;
+  justify-self: end;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  text-align: end;
+}
+
+.aboutBrand {
+  grid-area: aboutBrand;
+  justify-self: end;
+  width: 200px;
+  height: 24px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #6E9C9F;
+  text-align: end;
+}
+
+.aboutBrand:hover {
+  text-decoration: underline;
+}

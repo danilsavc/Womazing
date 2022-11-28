@@ -1,0 +1,103 @@
+.Privacy {
+  display: grid;
+  grid-template-rows: 252px 50px 1fr;
+  grid-template-areas: "title" "subtitle" "text";
+}
+
+.public_oferta {
+  display: grid;
+  grid-template-rows: 252px 50px 1fr;
+  grid-template-areas: "title" "subtitle" "text";
+}
+
+.title {
+  grid-area: title;
+  align-self: flex-end;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.subtitle {
+  grid-area: subtitle;
+  align-self: end;
+}
+
+.main {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.minor {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #919191;
+}
+
+.text {
+  grid-area: text;
+
+  display: grid;
+  grid-template-rows: 450px 250px repeat(22, 1fr) 245px;
+  align-items: center;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+
+}
+
+.item:nth-child(10) {
+  align-self: center;
+}
+
+.item:nth-child(3) {
+  align-self: end;
+}
+
+.item:nth-child(4) {
+  align-self: center;
+}
+
+.item:nth-child(21) {
+  align-self: center;
+}
+
+.text_oferta {
+  grid-area: text;
+
+  display: grid;
+  grid-template-rows: 450px 250px repeat(57, 1fr) 245px;
+  align-items: center;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  align-items: center;
+}
+
+.item_oferta:first-child {
+  align-self: end;
+}

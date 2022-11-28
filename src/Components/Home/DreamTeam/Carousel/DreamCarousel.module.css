@@ -1,0 +1,135 @@
+.slider {
+  display: grid;
+  grid-template-columns: 50px 730px 50px;
+  grid-template-areas: "button_left carousel button_right";
+  margin-left: -50px;
+}
+
+.carousel {
+  grid-area: carousel;
+  overflow: hidden;
+  max-width: 730px;
+
+  position: relative;
+}
+
+.carouselInner {
+  white-space: nowrap;
+  transition: ease 1s;
+}
+
+.carouselItem {
+  display: inline-block;
+  width: 100%;
+}
+
+.button_left {
+  grid-area: button_left;
+  align-self: center;
+}
+
+.button_right {
+  grid-area: button_right;
+  align-self: center;
+  justify-self: center;
+}
+
+.button_left,
+.button_right {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.button_left::before,
+.button_left::after,
+.button_right::before,
+.button_right::after {
+  content: '';
+  position: absolute;
+}
+
+.button_right::before {
+  width: 30px;
+  height: 1px;
+  background-color: black;
+  top: 9px;
+  left: 14px;
+}
+
+.button_left::before {
+  width: 30px;
+  height: 1px;
+  background-color: black;
+  top: 9px;
+}
+
+.button_left::after,
+.button_right::after {
+  width: 14px;
+  height: 14px;
+}
+
+.button_left::after {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  transform: rotate(-45deg);
+  top: 2px;
+}
+
+.button_right::after {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  transform: rotate(135deg);
+  top: 2px;
+  left: 29px;
+}
+
+.button_left:hover,
+.button_right:hover {
+  opacity: 0.3;
+}
+
+.bullets {
+  position: absolute;
+}
+
+.bullet1 {
+  width: 30px;
+  height: 4px;
+  background: #000000;
+}
+
+.bullet2 {
+  width: 30px;
+  height: 4px;
+  background: #000000;
+}
+
+.bullet3 {
+  width: 30px;
+  height: 4px;
+  background: #000000;
+}
+
+.carouselIndicator {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 1.5em;
+  z-index: 2;
+}
+
+.item {
+  width: 30px;
+  height: 4px;
+  border: none;
+  margin: 0.5em;
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.active {
+  background: #FFF;
+  transition: ease 0.5s;
+}

@@ -1,0 +1,121 @@
+.aboutBrand {
+  display: grid;
+  grid-template-rows: 257px 264px 1fr 328px;
+  grid-template-areas: "title" "subtitle" "container" "button";
+
+}
+
+.title {
+  grid-area: title;
+  align-self: flex-end;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.subtitle {
+  grid-area: subtitle;
+  margin-top: 20px;
+}
+
+.main {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.minor {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #919191;
+}
+
+.container {
+  grid-area: container;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-template-areas: "img1 text1" "text2 img2";
+  gap: 94px;
+  align-items: center;
+}
+
+.img:nth-child(1) {
+  grid-area: img1;
+}
+
+.img:nth-child(2) {
+  grid-area: img2;
+}
+
+.text1 {
+  grid-area: text1;
+}
+
+.text2 {
+  grid-area: text2;
+}
+
+.text1_title,
+.text2_title {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.text1,
+.text2 {
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  align-items: flex-start;
+}
+
+.button_open {
+  grid-area: button;
+  align-self: center;
+  justify-self: center;
+
+  width: 243px;
+  height: 68px;
+  background: #6E9C9F;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 138.9%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+
+.button_open:hover {
+  border: 1px solid #6E9C9F;
+  background-color: #FFFFFF;
+  color: #6E9C9F;
+}
