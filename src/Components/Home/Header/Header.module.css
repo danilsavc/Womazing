@@ -1,13 +1,13 @@
 .girl2 {
     position: absolute;
-    margin-left: 560px;
-    margin-top: 328px;
+    left: 560px;
+    top: 328px;
 }
 
 .girl3 {
     position: absolute;
-    margin-left: 1015px;
-    margin-top: 90px;
+    left: 1015px;
+    top: 90px;
 }
 
 .rightBlock {
@@ -102,9 +102,185 @@
     justify-self: end;
 }
 
-
-
 .girl1 {
     grid-area: girl1;
     justify-self: end;
+    position: absolute;
+    left: 145px;
+}
+
+@media (max-width: 1607px) {
+    .rightBlock {
+        width: 690px;
+        left: 250px;
+    }
+}
+
+@media (max-width: 1519px) {
+    .girl1 {
+        left: 230px;
+    }
+
+    .girl2 {
+        left: 642px;
+    }
+
+    .girl3 {
+        left: 1100px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .girl1 {
+        left: 230px;
+    }
+
+    .girl2 {
+        left: 672px;
+    }
+
+    .girl3 {
+        left: 1100px;
+    }
+}
+
+@media (max-width: 1340px) {
+    .girl1 {
+        left: 130px;
+    }
+
+    .girl2 {
+        left: 600px;
+    }
+
+    .girl3 {
+        left: 1000px;
+    }
+
+    .rightBlock {
+        width: 744px;
+        left: 85px;
+    }
+}
+
+@media (max-width: 1205px) {
+    .header {
+        grid-template-columns: 585px;
+        grid-template-rows: 500px 1fr 1fr;
+        grid-template-areas: "container" "buttons" "bullits";
+        align-items: center;
+    }
+
+    .girl1,
+    .bullits,
+    .buttons {
+        justify-self: center;
+    }
+
+    .girl1 {
+        left: 650px;
+        top: 0;
+    }
+
+    .girl2 {
+        left: 600px;
+    }
+
+    .girl3 {
+        left: 950px;
+    }
+
+    .container {
+        justify-self: start;
+        z-index: 2;
+    }
+
+    .rightBlock {
+        width: 629px;
+        left: 18px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px 100px 50px 1fr;
+        grid-template-areas: "container" "buttons" "bullits" "girl1";
+        align-items: center;
+    }
+
+    .girl1,
+    .bullits,
+    .buttons {
+        justify-self: center;
+    }
+
+    .girl1 {
+        position: static;
+        grid-area: girl1;
+    }
+
+    .girl2 {
+        left: 160px;
+        top: 1050px;
+    }
+
+    .girl3 {
+        left: 600px;
+        top: 700px;
+    }
+
+    .container {
+        justify-self: center;
+        z-index: 2;
+    }
+
+    .rightBlock {
+
+        width: 800px;
+        left: -500px;
+        top: 750px;
+    }
+}
+
+@media (max-width: 900px) {
+    .girl2 {
+        left: 100px;
+        top: 1050px;
+    }
+
+    .girl3 {
+        left: 500px;
+        top: 700px;
+    }
+
+    .rightBlock {
+        width: 700px;
+        left: -500px;
+        top: 750px;
+    }
+}
+
+@media (max-width: 730px) {
+    .girl2 {
+        left: 0px;
+        top: 1050px;
+    }
+
+    .girl3 {
+        left: 400px;
+        top: 700px;
+    }
+
+    .rightBlock {
+        display: none;
+    }
+}
+
+@media (max-width: 620px) {
+
+    .girl2,
+    .girl3 {
+        display: none;
+    }
 }

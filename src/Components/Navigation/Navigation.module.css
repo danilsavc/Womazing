@@ -9,6 +9,8 @@
   align-items: center;
   min-height: 100px;
   gap: 40px;
+
+  user-select: none;
 }
 
 .header_logo {

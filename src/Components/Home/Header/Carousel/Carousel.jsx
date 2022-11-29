@@ -17,7 +17,7 @@ const Carousel = ({text}) => {
       <div className={styles.carousel}>
         <div 
         className={styles.carouselInner}
-        style={{transform: `translateY(${-currentSlide * 363}px)`}}
+        style={{transform: `translateY(${-currentSlide * 33.3}%)`}}
         >
           {text.map((slide, index) => (
             <CarouselItem slide={slide} key={index}/>

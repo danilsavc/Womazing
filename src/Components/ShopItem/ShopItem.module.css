@@ -36,6 +36,7 @@
 
 .img {
   grid-area: img;
+  user-select: none;
 }
 
 .content {
