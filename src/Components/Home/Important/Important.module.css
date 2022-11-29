@@ -25,3 +25,25 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
+@media (max-width: 1205px) {
+  .important {
+    display: grid;
+    grid-template-rows: 130px 1fr 2fr;
+    grid-template-areas:
+      "."
+      "title"
+      "items";
+  }
+
+  .items {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-self: center;
+    gap: 50px;
+  }
+
+  .title {
+    align-self: center;
+  }
+}

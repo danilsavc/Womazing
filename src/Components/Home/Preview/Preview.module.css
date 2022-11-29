@@ -66,3 +66,17 @@
   color: #fff;
   transition: 0.5s ease;
 }
+
+@media (max-width: 1205px) {
+  .preview {
+    grid-template-rows: 130px 1fr 10fr 133px;
+    grid-template-areas: "." "title" "items" "btn";
+  }
+
+  .items {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-self: center;
+    gap: 40px;
+  }
+}
