@@ -116,6 +116,13 @@
     }
 }
 
+@media (max-width: 1540px) {
+    .rightBlock {
+        width: 635px;
+        left: 250px;
+    }
+}
+
 @media (max-width: 1519px) {
     .girl1 {
         left: 230px;
