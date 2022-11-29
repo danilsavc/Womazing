@@ -133,3 +133,56 @@
   background: #FFF;
   transition: ease 0.5s;
 }
+
+@media (max-width: 900px) {
+  .slider {
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-areas: "button_left carousel button_right";
+  }
+
+  .carousel,
+  .img {
+    width: 620px;
+  }
+}
+
+@media (max-width: 800px) {
+  .slider {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "button_left button_right" "carousel carousel";
+  }
+
+  .button_right {
+    justify-self: end;
+  }
+
+  .carousel,
+  .img {
+    width: 520px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .carousel,
+  .img {
+    width: 420px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .carousel,
+  .img {
+    width: 320px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .carousel,
+  .img {
+    width: 290px;
+  }
+}

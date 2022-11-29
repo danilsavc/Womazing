@@ -1,7 +1,6 @@
 .carousel {
   margin: 0 auto;
   overflow: hidden;
-  max-width: 585px;
   max-height: 370px;
 }
 
@@ -43,7 +42,35 @@
   color: #000000;
 }
 
-@media (max-width: 661px) {
+@media (max-width: 1030px) {
+  .caruselItem {
+    width: 550px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .caruselItem {
+    width: 450px;
+    gap: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 35px;
+  }
+
+  .caruselItem {
+    width: 350px;
+    gap: 150px;
+  }
+}
+
+/* @media (max-width: 661px) {
   .subtitle {
     font-size: 15px;
   }
@@ -59,4 +86,4 @@
   .title {
     font-size: 40px;
   }
-}
+} */

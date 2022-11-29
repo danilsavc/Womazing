@@ -278,9 +278,15 @@
 }
 
 @media (max-width: 620px) {
+    .header {
+        max-height: 750px;
+        grid-template-rows: 500px 100px 50px;
+        grid-template-areas: "container" "buttons" "bullits";
+    }
 
     .girl2,
-    .girl3 {
+    .girl3,
+    .girl1 {
         display: none;
     }
 }

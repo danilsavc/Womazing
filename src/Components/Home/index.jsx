@@ -6,17 +6,15 @@ import Important from './Important';
 import Preview from './Preview';
 
 
-
-
 const Home = () => {
 
   return (
-    <>
+    <div>
       <Header/>
       <Preview/>
       <Important/>
       <DreamTeam/>
-    </>
+    </div>
     
   );
 };

@@ -47,3 +47,51 @@ a {
   max-width: 1110px;
   margin: 0 auto;
 }
+
+@media (max-width: 1010px) {
+  .Wrapper {
+    width: calc(100vw - 90px);
+  }
+}
+
+@media (max-width: 910px) {
+  .Wrapper {
+    width: calc(100vw - 80px);
+  }
+}
+
+@media (max-width: 810px) {
+  .Wrapper {
+    width: calc(100vw - 70px);
+  }
+}
+
+@media (max-width: 710px) {
+  .Wrapper {
+    width: calc(100vw - 60px);
+  }
+}
+
+@media (max-width: 610px) {
+  .Wrapper {
+    width: calc(100vw - 50px);
+  }
+}
+
+@media (max-width: 510px) {
+  .Wrapper {
+    width: calc(100vw - 40px);
+  }
+}
+
+@media (max-width: 410px) {
+  .Wrapper {
+    width: calc(100vw - 30px);
+  }
+}
+
+@media (max-width: 310px) {
+  .Wrapper {
+    width: calc(100vw - 20px);
+  }
+}

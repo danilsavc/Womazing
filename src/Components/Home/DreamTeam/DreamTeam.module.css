@@ -80,3 +80,50 @@
 .aboutBrand:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 1240px) {
+  .DreamTeam {
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px 1fr 2fr 3fr;
+    grid-template-areas:
+      "."
+      "title"
+      "rightbar"
+      "carousel";
+    align-items: center;
+  }
+
+  .rightbar {
+    width: 650px;
+    justify-self: center;
+  }
+
+  .carousel {
+    justify-self: center;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 900px) {
+  .rightbar {
+    width: 550px;
+  }
+}
+
+@media (max-width: 800px) {
+  .rightbar {
+    width: 450px;
+  }
+}
+
+@media (max-width: 700px) {
+  .rightbar {
+    width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .rightbar {
+    width: 250px;
+  }
+}
