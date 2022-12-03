@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   categoryId: 0,
+  currentPage: 1,
 };
 
 const filterSlice = createSlice( {
@@ -10,10 +11,13 @@ const filterSlice = createSlice( {
   reducers: {
     setCategoryId( state, action ) {
       state.categoryId = action.payload;
+    },
+    setCurrenPage( state, action ) {
+      state.currentPage = action.payload;
     }
   }
 } )
 
-export const { setCategoryId } = filterSlice.actions;
+export const { setCategoryId, setCurrenPage } = filterSlice.actions;
 
 export default filterSlice.reducer
