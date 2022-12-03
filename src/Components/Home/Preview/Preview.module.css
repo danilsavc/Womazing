@@ -74,8 +74,15 @@
   }
 
   .items {
+    grid-template-columns: repeat(2, 2fr);
+    justify-self: center;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 830px) {
+  .items {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
     justify-self: center;
     gap: 40px;
   }

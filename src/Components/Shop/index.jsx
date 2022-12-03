@@ -19,6 +19,8 @@ const Shop = () => {
 
   const [clothers, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
+  const [isPagination, setIsPagination] = React.useState(true);
+
 
   const onChangeCategory = (id) => {
     dispatch(setCategoryId(id))
@@ -34,6 +36,10 @@ const Shop = () => {
     .then((res) => {
       setItems(res.data)
       setIsLoading(false)
+      setIsPagination(false)
+      if (res.data.length > 5) {
+        setIsPagination(true);
+      }
     })
   }, [categoryId, currentPage])
 
@@ -60,9 +66,15 @@ const Shop = () => {
             </div>))
           }
       </div>
-      <div className={style.pagination}>
-        <Pagination currentPage={currentPage} onChangePage={onChangePage}/>
-      </div>
+      {isPagination 
+        ?
+        <div className={style.pagination}>
+          <Pagination currentPage={currentPage} onChangePage={onChangePage}/>
+        </div>
+        :
+        <></>
+      }
+      
       
     </div>
   );
