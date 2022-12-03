@@ -1,0 +1,39 @@
+.root {
+  user-select: none;
+
+  li {
+    display: inline-block;
+
+    a {
+      text-align: center;
+      width: 41px;
+      line-height: 38px;
+      height: 41px;
+      border: 1px solid #000000;
+      margin-right: 14px;
+      cursor: pointer;
+      transition: ease 0.2s;
+
+      display: inline-block;
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 17px;
+      color: #000000;
+
+      &:hover {
+        background-color: #000000;
+        color: white;
+      }
+    }
+  }
+
+  :global {
+    .selected {
+      a {
+        background-color: #000000;
+        color: white;
+      }
+    }
+  }
+}
