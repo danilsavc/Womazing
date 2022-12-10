@@ -2,6 +2,8 @@ import React from 'react';
 
 import style from './Bag.module.css'
 
+import BagItem from './BagItem';
+
 const Bag = () => {
   return (
     <div className={style.bag}>
@@ -19,17 +21,11 @@ const Bag = () => {
           <span className={style.all}>Усього</span>
         </div>
 
-        <div className={style.good}>
-          <div className={style.good_item}>
-            <div className={style.cancel}></div>
-            <div className={style.img}></div>
-            <div className={style.good_name}>Пальто</div>
-          </div>
-          
-          <span className={style.good_price}>129</span>
-          <div className={style.good_amount}><span>1</span></div>
-          <span className={style.good_all}>129</span>
-        </div>
+        <BagItem/>
+      </div>
+      <div className={style.order}>
+        <div className={style.total}><span>Всього:  $129</span></div>
+        <div className={style.orderBtn}><span>Оформити замовлення</span></div>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 .bag {
   display: grid;
 
-  grid-template-rows: 257px 50px 1fr;
-  grid-template-areas: "title" "subtitle" "bag_container";
+  grid-template-rows: 257px 50px 214px 1fr 1fr;
+  grid-template-areas: "title" "subtitle" "." "bag_container" "order";
 }
 
 .title {
@@ -62,15 +62,58 @@
   grid-template-rows: 52px;
 }
 
-.good {
+.order {
+  grid-area: order;
+  align-self: center;
+  justify-self: end;
+
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  grid-template-rows: 230px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 15px;
+}
+
+.total,
+.orderBtn {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.img {
-  width: 136px;
-  height: 205px;
-  background-color: blue;
+.total {
+  width: 287px;
+  height: 68px;
+
+  background: #F1EADC;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.orderBtn {
+  width: 236px;
+  height: 68px;
+  background: #6E9C9F;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 138.9%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+
+.orderBtn:hover {
+  background: #FFFFFF;
+  color: #6E9C9F;
+  border: 1px solid #6E9C9F;
 }

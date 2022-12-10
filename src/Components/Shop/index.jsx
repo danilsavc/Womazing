@@ -45,6 +45,21 @@ const Shop = () => {
     })
   }
 
+  // If was first render and change params
+  React.useEffect(() => {
+    if(isMounted.current) {
+      const queryString = qs.stringify({
+        categoryId: categoryId, 
+        currentPage
+      });
+  
+      navigate(`?${queryString}`);
+    }
+    isMounted.current = true;
+    // eslint-disable-next-line
+  }, [categoryId, currentPage])
+
+  // If was first render, that check URL-params and save in Redux
   React.useEffect(() => {
     if (window.location.search) {
       const params = qs.parse(window.location.search.substring(1))
@@ -58,6 +73,7 @@ const Shop = () => {
      // eslint-disable-next-line
   }, [])
 
+  // If was first render, get items
   React.useEffect(() => {
     window.scrollTo(0, 0)
 
@@ -68,19 +84,6 @@ const Shop = () => {
     isSearch.current = false;
  // eslint-disable-next-line
   }, [categoryId, currentPage,])
-
-  React.useEffect(() => {
-    if(isMounted.current) {
-      const queryString = qs.stringify({
-        categoryId: categoryId, 
-        currentPage
-      });
-  
-      navigate(`?${queryString}`);
-    }
-    isMounted.current = true;
-    // eslint-disable-next-line
-  }, [categoryId, currentPage])
 
   return (
     <div className={style.shop}>

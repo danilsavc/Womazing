@@ -1,0 +1,50 @@
+.good {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 230px;
+  align-items: center;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.good_item {
+  display: grid;
+  grid-template-columns: 12px 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "cancel img good_name";
+  align-items: center;
+  gap: 40px;
+}
+
+.img {
+  grid-area: img;
+  justify-self: center;
+  width: 136px;
+  height: 205px;
+  background-color: blue;
+}
+
+.cancel {
+  grid-area: cancel;
+  cursor: pointer;
+}
+
+.cancel:hover {
+  opacity: 0.5;
+}
+
+.imgCancel {
+  width: 12px;
+  height: 12px;
+}
+
+.good_name {
+  grid-area: good_name;
+  justify-self: start;
+}
