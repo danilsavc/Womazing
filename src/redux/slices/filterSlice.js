@@ -14,10 +14,15 @@ const filterSlice = createSlice( {
     },
     setCurrenPage( state, action ) {
       state.currentPage = action.payload;
+    },
+    setFilters( state, action ) {
+      state.currentPage = Number( action.payload.currentPage );
+      state.categoryId = Number( action.payload.categoryId );
+
     }
   }
 } )
 
-export const { setCategoryId, setCurrenPage } = filterSlice.actions;
+export const { setCategoryId, setCurrenPage, setFilters } = filterSlice.actions;
 
 export default filterSlice.reducer

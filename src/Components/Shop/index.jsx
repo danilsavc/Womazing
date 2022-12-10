@@ -1,9 +1,12 @@
 import axios from 'axios';
 import React from 'react';
+import qs from 'qs'
+import { useNavigate } from 'react-router-dom';
+
 
 import { useSelector, useDispatch } from 'react-redux';
 
-import { setCategoryId, setCurrenPage } from '../../redux/slices/filterSlice'
+import { setCategoryId, setCurrenPage, setFilters } from '../../redux/slices/filterSlice'
 import Pagination from '../Pagination';
 
 import ShopItem from '../ShopItem';
@@ -14,36 +17,70 @@ import style from './Shop.module.css'
 
 
 const Shop = () => {
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const isSearch = React.useRef(false);
+  const isMounted = React.useRef(false);
   const {categoryId, currentPage} = useSelector(state => state.filter)
 
   const [clothers, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
-  const [isPagination, setIsPagination] = React.useState(true);
-
 
   const onChangeCategory = (id) => {
     dispatch(setCategoryId(id))
+    onChangePage(1)
   }
 
   const onChangePage = number => {
     dispatch(setCurrenPage(number))
   }
 
-  React.useEffect(() => {
+  const fetchItems = () => {
     setIsLoading(true)
     axios.get(`https://63763d1481a568fc25f99127.mockapi.io/items?page=${currentPage}&limit=6&${categoryId > 0 ? `category=${categoryId}` : ""}`)
     .then((res) => {
       setItems(res.data)
       setIsLoading(false)
-      setIsPagination(false)
-      if (res.data.length > 5) {
-        setIsPagination(true);
-      }
     })
-  }, [categoryId, currentPage])
+  }
 
+  React.useEffect(() => {
+    if (window.location.search) {
+      const params = qs.parse(window.location.search.substring(1))
+
+      dispatch(setFilters({
+        ...params,
+      }))
+
+      isSearch.current = true;
+    }
+     // eslint-disable-next-line
+  }, [])
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+
+    if (!isSearch.current) {
+      fetchItems();
+    }
+
+    isSearch.current = false;
+ // eslint-disable-next-line
+  }, [categoryId, currentPage,])
+
+  React.useEffect(() => {
+    if(isMounted.current) {
+      const queryString = qs.stringify({
+        categoryId: categoryId, 
+        currentPage
+      });
   
+      navigate(`?${queryString}`);
+    }
+    isMounted.current = true;
+    // eslint-disable-next-line
+  }, [categoryId, currentPage])
 
   return (
     <div className={style.shop}>
@@ -66,16 +103,10 @@ const Shop = () => {
             </div>))
           }
       </div>
-      {isPagination 
-        ?
-        <div className={style.pagination}>
-          <Pagination currentPage={currentPage} onChangePage={onChangePage}/>
-        </div>
-        :
-        <></>
-      }
-      
-      
+      <div className={style.pagination}>
+        <Pagination currentPage={currentPage} onChangePage={onChangePage}/>
+      </div>
+
     </div>
   );
 };
