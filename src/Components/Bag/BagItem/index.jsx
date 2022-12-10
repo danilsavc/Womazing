@@ -12,7 +12,8 @@ const BagItem = () => {
         <div className={style.img}></div>
         <div className={style.good_name}>Пальто</div>
       </div>
-      
+
+      <span className={style.size}>M</span>
       <span className={style.good_price}>$ 129</span>
       <div className={style.good_amount}><span>1</span></div>
       <span className={style.good_all}>$ 129</span>

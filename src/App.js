@@ -7,6 +7,7 @@ import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Layout from './Components/Layout';
 import NotFound from './Components/NotFound';
+import OneItem from './Components/OneItem';
 import Privacy from './Components/PublicAndPrivacyPolicy/Privacy';
 import Public from './Components/PublicAndPrivacyPolicy/Public';
 import Shop from './Components/Shop';
@@ -24,6 +25,7 @@ function App() {
             <Route path='about-brand' element={<AboutBrand />} />
             <Route path='contacts' element={<Contacts />} />
             <Route path='bag' element={<Bag />} />
+            <Route path='shop/thing' element={<OneItem />} />
             <Route path='*' element={<NotFound />} />
           </Route>
         </Routes>

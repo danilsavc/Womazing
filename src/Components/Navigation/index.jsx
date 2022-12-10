@@ -40,7 +40,7 @@ const Navigation = () => {
           <span className={style.item}>+380676767676</span>
         </div>
         
-        <NavLink to='/bag' className={style.header_bag}><img src={bag} alt='bag' /></NavLink>
+        <NavLink to='/bag' className={style.header_bag}><img src={bag} alt='bag' /><div className={style.bagCount}>1</div></NavLink>
       </header>
 
       <PopUpCallBack active={modalActive} setActive={setModalActive}>

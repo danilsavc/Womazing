@@ -16,6 +16,7 @@ const Bag = () => {
       <div className={style.bag_container}>
         <div className={style.infoBar}>
           <span className={style.item}>Товар</span>
+          <span className={style.item}>Розмір</span>
           <span className={style.price}>Ціна</span>
           <span className={style.amount}>Кількість</span>
           <span className={style.all}>Усього</span>
@@ -24,7 +25,7 @@ const Bag = () => {
         <BagItem/>
       </div>
       <div className={style.order}>
-        <div className={style.total}><span>Всього:  $129</span></div>
+        <div className={style.total}><span>Всього: $ 129</span></div>
         <div className={style.orderBtn}><span>Оформити замовлення</span></div>
       </div>
     </div>

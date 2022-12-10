@@ -1,0 +1,65 @@
+.sizes {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "label" "sizeContent";
+  gap: 23px;
+}
+
+.label {
+  grid-area: label;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.sizeContent {
+  grid-area: sizeContent;
+
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  grid-template-rows: 1fr;
+  gap: 14px;
+}
+
+.size {
+  width: 41px;
+  height: 41px;
+  border: 1px solid black;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.active {
+  background: #000000;
+  transition: ease 0.5s;
+}
+
+.active span {
+  color: white;
+}
+
+.size:hover {
+  opacity: 0.5;
+}
+
+.active:hover {
+  opacity: 1;
+}
