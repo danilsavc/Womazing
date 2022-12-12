@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React from 'react';
 import qs from 'qs'
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +13,7 @@ import Skeleton from '../ShopItem/Skeleton';
 import Categories from './Categories';
 
 import style from './Shop.module.css'
+import { fetchClothers } from '../../redux/slices/clotherSlice';
 
 
 const Shop = () => {
@@ -22,10 +22,9 @@ const Shop = () => {
 
   const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
-  const {categoryId, currentPage} = useSelector(state => state.filter)
 
-  const [clothers, setItems] = React.useState([]);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const {categoryId, currentPage} = useSelector(state => state.filter)
+  const {items, status} = useSelector(state => state.clother)
 
   const onChangeCategory = (id) => {
     dispatch(setCategoryId(id))
@@ -36,13 +35,11 @@ const Shop = () => {
     dispatch(setCurrenPage(number))
   }
 
-  const fetchItems = () => {
-    setIsLoading(true)
-    axios.get(`https://63763d1481a568fc25f99127.mockapi.io/items?page=${currentPage}&limit=6&${categoryId > 0 ? `category=${categoryId}` : ""}`)
-    .then((res) => {
-      setItems(res.data)
-      setIsLoading(false)
-    })
+  const fetchItems = async () => {
+    dispatch(fetchClothers({
+      currentPage,
+      categoryId,
+    }))
   }
 
   // If was first render and change params
@@ -98,9 +95,9 @@ const Shop = () => {
       </div>
               
       <div className={style.items}>
-        {isLoading 
-          ? [...new Array(6)].map((_, index) => <Skeleton key={index}/>) 
-          : clothers.map((item, index) => (
+        {status === 'loading' 
+          ? [...new Array(6)].map((_, index) => <div key={index}><Skeleton /></div> ) 
+          : items.map((item, index) => (
             <div key={index} className={style.container}>
               <ShopItem girl={item.girl} price={item.price} title={item.title}/>
             </div>))

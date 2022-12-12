@@ -26,7 +26,11 @@ const OneItem = () => {
         <div className={style.sizes}>
           <Sizes value={size} onChangeSize={onChangeSize}/>
         </div>
-        <div className={style.addInBag}><span>Додати в кошик</span></div>
+        <div className={style.btn}>
+          <div className={style.addInBag}><span>Додати в кошик</span></div>
+          <div className={style.countThings}>0</div>
+        </div>
+        
       </div>
     </div>
   );

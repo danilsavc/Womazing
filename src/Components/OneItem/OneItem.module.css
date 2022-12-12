@@ -52,7 +52,7 @@
   grid-template-areas:
     "img price"
     "img sizes"
-    "img addInBag";
+    "img btn";
   gap: 74px;
 }
 
@@ -79,6 +79,15 @@
 
 .sizes {
   grid-area: sizes;
+}
+
+.btn {
+  grid-area: btn;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 68px;
+  grid-template-areas: "addInBag countThings";
+  gap: 30px;
 }
 
 .addInBag {
@@ -108,4 +117,27 @@
   background: white;
   border: 1px solid #6E9C9F;
   color: #6E9C9F;
+}
+
+.countThings {
+  grid-area: countThings;
+  align-self: center;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+
+  width: 68px;
+  height: 68px;
+  border: 1px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  user-select: none;
 }

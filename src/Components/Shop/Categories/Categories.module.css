@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 }
 
 .categories_item:hover {
