@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import style from './Bag.module.css'
 
@@ -7,10 +8,10 @@ import BagItem from './BagItem';
 const Bag = () => {
   return (
     <div className={style.bag}>
-      <h1 className={style.title}>Магазин</h1>
+      <h1 className={style.title}>Корзина</h1>
       <div className={style.subtitle}>
         <span className={style.main}>Головна - </span> 
-        <span className={style.minor}>Магазин</span>
+        <span className={style.minor}>Корзина</span>
       </div>
               
       <div className={style.bag_container}>
@@ -26,7 +27,7 @@ const Bag = () => {
       </div>
       <div className={style.order}>
         <div className={style.total}><span>Всього: $ 129</span></div>
-        <div className={style.orderBtn}><span>Оформити замовлення</span></div>
+        <NavLink to='/bag/order'><div className={style.orderBtn}><span>Оформити замовлення</span></div></NavLink>
       </div>
     </div>
   );

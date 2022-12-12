@@ -1,0 +1,69 @@
+.payment {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "title" "checkbox" "btn";
+  align-items: center;
+}
+
+.title {
+  grid-area: title;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.checbox {
+  grid-area: checkbox;
+  user-select: none;
+}
+
+.customCheckBox {
+  cursor: pointer;
+}
+
+.text {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  padding-left: 10px;
+}
+
+.btn {
+  grid-area: btn;
+
+  width: 246px;
+  height: 68px;
+
+  background: #6E9C9F;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 138.9%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  user-select: none;
+  transition: ease 0.5s;
+}
+
+.btn:hover {
+  color: #6E9C9F;
+  border: 1px solid #6E9C9F;
+  background-color: #FFFFFF;
+}

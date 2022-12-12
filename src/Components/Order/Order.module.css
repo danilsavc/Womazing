@@ -1,0 +1,68 @@
+.order {
+  display: grid;
+
+  grid-template-rows: 257px 50px 214px 1fr 130px;
+  grid-template-areas: "title" "subtitle" "." "content" ".";
+}
+
+.title {
+  grid-area: title;
+  align-self: flex-end;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.subtitle {
+  grid-area: subtitle;
+  align-self: flex-end;
+}
+
+.main {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.minor {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #919191;
+}
+
+.content {
+  grid-area: content;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "dataUser payment"
+    "adressUser payment";
+}
+
+.dataUser {
+  grid-area: dataUser;
+}
+
+.adressUser {
+  grid-area: adressUser;
+}
+
+.payment {
+  grid-area: payment;
+  align-self: center;
+}

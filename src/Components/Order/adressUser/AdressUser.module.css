@@ -1,0 +1,37 @@
+.form {
+  display: grid;
+  grid-template-areas: "title" "inputs";
+}
+
+.title {
+  grid-area: title;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.inputs {
+  grid-area: inputs;
+
+  display: grid;
+  grid-template-rows: repeat(5, 51px);
+}
+
+.input {
+  width: 350px;
+  border: 0;
+  border-bottom: 1px solid black;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #868686;
+}
