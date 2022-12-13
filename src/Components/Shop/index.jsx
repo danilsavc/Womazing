@@ -100,7 +100,7 @@ const Shop = () => {
           ? [...new Array(6)].map((_, index) => <div key={index}><Skeleton /></div> ) 
           : items.map((item, index) => (
             <div key={index} className={style.container}>
-              <ShopItem girl={item.girl} price={item.price} title={item.title}/>
+              <ShopItem id={item.id} girl={item.girl} price={item.price} title={item.title}/>
             </div>))
           }
       </div>

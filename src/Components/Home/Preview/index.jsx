@@ -36,7 +36,7 @@ const Preview = () => {
           : items.map((item, index) => (
             index < 3 ?
             <div key={index} className={style.container}>
-              <ShopItem girl={item.girl} title={item.title} price={item.price}/>
+              <ShopItem id={item.id} girl={item.girl} title={item.title} price={item.price}/>
             </div>
             : <div key={index}></div>
         ))}

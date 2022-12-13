@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 
 import style from "../Navigation/Navigation.module.css";
@@ -13,6 +13,8 @@ import PopUpSuccess from "../PopUpCallBack/PopUpSuccess";
 const Navigation = () => {
   const [modalActive, setModalActive] = React.useState(false)
   const [modalSuccess, setModalSucces] = React.useState(false)
+
+  const location = useLocation();
 
   let SetAtribute = () => {
     setModalSucces(true)
@@ -39,8 +41,10 @@ const Navigation = () => {
           <div onClick={() => setModalActive(true)} className={style.telephone}><img src={telephone} alt='telephone' /></div>
           <span className={style.item}>+380676767676</span>
         </div>
+        {location.pathname !== '/bag' && (
+          <NavLink to='/bag' className={style.header_bag}><img src={bag} alt='bag' /><div className={style.bagCount}>1</div></NavLink>
+        )}
         
-        <NavLink to='/bag' className={style.header_bag}><img src={bag} alt='bag' /><div className={style.bagCount}>1</div></NavLink>
       </header>
 
       <PopUpCallBack active={modalActive} setActive={setModalActive}>

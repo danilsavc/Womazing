@@ -27,7 +27,7 @@ function App() {
             <Route path='about-brand' element={<AboutBrand />} />
             <Route path='contacts' element={<Contacts />} />
             <Route path='bag' element={<Bag />} />
-            <Route path='shop/thing' element={<OneItem />} />
+            <Route path='shop/thing/:id' element={<OneItem />} />
             <Route path='bag/order' element={<Order />} />
             <Route path='bag/order/order-success' element={<OrderSucces />} />
             <Route path='*' element={<NotFound />} />
