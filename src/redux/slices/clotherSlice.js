@@ -4,7 +4,7 @@ import axios from 'axios';
 export const fetchClothers = createAsyncThunk( 'clother/fetchClothersStatus', async ( params ) => {
   const {
     currentPage,
-    categoryId
+    categoryId,
   } = params;
   const { data } = await axios.get( `https://63763d1481a568fc25f99127.mockapi.io/items?page=${currentPage}&limit=6&${categoryId > 0 ? `category=${categoryId}` : ""}` );
   return data;

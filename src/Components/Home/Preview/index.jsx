@@ -1,24 +1,28 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchClothers } from '../../../redux/slices/clotherSlice';
 
 import style from "../Preview/Preview.module.css";
 
 import ShopItem from '../../ShopItem';
-import axios from 'axios';
 import Skeleton from '../../ShopItem/Skeleton';
 
 const Preview = () => {
-  const [clothers_preview, setClothers_preview] = React.useState([]);
+  const dispatch = useDispatch();
+  const {items, status} = useSelector(state => state.clother)
+  const {categoryId, currentPage} = useSelector(state => state.filter)
 
-  const [isLoading, setIsLoading] = React.useState(true);
+  const getPreview = async () => {
+    dispatch(fetchClothers({
+      categoryId,
+      currentPage,
+    }))
+  }
 
   React.useEffect(() => {
-    setIsLoading(true)
-    axios.get("https://63763d1481a568fc25f99127.mockapi.io/items?preview=true")
-    .then((res) => {
-      setClothers_preview(res.data)
-      setIsLoading(false)
-    })
+    getPreview();
+    // eslint-disable-next-line
   }, [])
 
   
@@ -26,12 +30,14 @@ const Preview = () => {
     <div className={style.preview}>
       <h1 id='NewCollection' className={style.title}>Нова Колекція</h1>
       <div className={style.items}>
-        {isLoading 
+        {status === 'loading' 
           ? [...new Array(3)].map((_, index) => <Skeleton key={index}/>) 
-          : clothers_preview.map((item, index) => (
+          : items.map((item, index) => (
+            index < 3 ?
             <div key={index} className={style.container}>
               <ShopItem girl={item.girl} title={item.title} price={item.price}/>
             </div>
+            : <div key={index}></div>
         ))}
       </div>
       <NavLink to='/shop' className={style.btn}><span className={style.btnText}>Відкрити магазин</span></NavLink>

@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { setCategoryId, setCurrenPage, setFilters } from '../../redux/slices/filterSlice'
+import { fetchClothers } from '../../redux/slices/clotherSlice';
 import Pagination from '../Pagination';
 
 import ShopItem from '../ShopItem';
@@ -13,7 +14,7 @@ import Skeleton from '../ShopItem/Skeleton';
 import Categories from './Categories';
 
 import style from './Shop.module.css'
-import { fetchClothers } from '../../redux/slices/clotherSlice';
+
 
 
 const Shop = () => {
