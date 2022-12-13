@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
 
-import { setCategoryId, setCurrenPage, setFilters } from '../../redux/slices/filterSlice'
-import { fetchClothers } from '../../redux/slices/clotherSlice';
+import { selectFilter, setCategoryId, setCurrenPage, setFilters } from '../../redux/slices/filterSlice'
+import { fetchClothers, selectClother } from '../../redux/slices/clotherSlice';
 import Pagination from '../Pagination';
 
 import ShopItem from '../ShopItem';
@@ -24,8 +24,8 @@ const Shop = () => {
   const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
 
-  const {categoryId, currentPage} = useSelector(state => state.filter)
-  const {items, status} = useSelector(state => state.clother)
+  const {categoryId, currentPage} = useSelector(selectFilter)
+  const {items, status} = useSelector(selectClother)
 
   const onChangeCategory = (id) => {
     dispatch(setCategoryId(id))

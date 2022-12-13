@@ -1,17 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchClothers } from '../../../redux/slices/clotherSlice';
+import { fetchClothers, selectClother } from '../../../redux/slices/clotherSlice';
 
 import style from "../Preview/Preview.module.css";
 
 import ShopItem from '../../ShopItem';
 import Skeleton from '../../ShopItem/Skeleton';
+import { selectFilter } from '../../../redux/slices/filterSlice';
 
 const Preview = () => {
   const dispatch = useDispatch();
-  const {items, status} = useSelector(state => state.clother)
-  const {categoryId, currentPage} = useSelector(state => state.filter)
+  const {categoryId, currentPage} = useSelector(selectFilter)
+  const {items, status} = useSelector(selectClother)
 
   const getPreview = async () => {
     dispatch(fetchClothers({

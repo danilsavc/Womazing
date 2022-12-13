@@ -40,6 +40,8 @@ const clotherSlice = createSlice( {
   },
 } )
 
+export const selectClother = ( state ) => state.clother;
+
 export const { setItems, } = clotherSlice.actions;
 
 export default clotherSlice.reducer

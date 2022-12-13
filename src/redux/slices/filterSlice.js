@@ -23,6 +23,8 @@ const filterSlice = createSlice( {
   }
 } )
 
+export const selectFilter = ( state ) => state.filter
+
 export const { setCategoryId, setCurrenPage, setFilters } = filterSlice.actions;
 
 export default filterSlice.reducer
