@@ -33,6 +33,10 @@
   color: #000000;
 }
 
+.main {
+  opacity: 0.9;
+}
+
 .minor {
   font-family: 'Raleway';
   font-style: normal;

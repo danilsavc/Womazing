@@ -21,7 +21,7 @@ const AboutBrand = () => {
     <div className={style.aboutBrand}>
       <h1 className={style.title}>Про бренд</h1>
       <div className={style.subtitle}>
-        <span className={style.main}>Головна - </span> 
+        <NavLink to='/'><span className={style.main}>Головна - </span></NavLink> 
         <span className={style.minor}>Про бренд</span>
       </div>
       <div className={style.container}>

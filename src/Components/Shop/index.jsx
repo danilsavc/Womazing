@@ -1,6 +1,6 @@
 import React from 'react';
 import qs from 'qs'
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -87,7 +87,7 @@ const Shop = () => {
     <div className={style.shop}>
       <h1 className={style.title}>Магазин</h1>
       <div className={style.subtitle}>
-        <span className={style.main}>Головна - </span> 
+        <NavLink to='/'><span className={style.main}>Головна - </span></NavLink> 
         <span className={style.minor}>Магазин</span>
       </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import AdressUser from './adressUser';
 import DataUser from './dataUser';
@@ -11,7 +12,7 @@ const Order = () => {
     <div className={style.order}>
       <h1 className={style.title}>Оформлення замовлення</h1>
       <div className={style.subtitle}>
-        <span className={style.main}>Головна - </span> 
+        <NavLink to='/'><span className={style.main}>Головна - </span></NavLink> 
         <span className={style.minor}>Оформлення замовлення</span>
       </div>
 

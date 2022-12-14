@@ -10,7 +10,7 @@ const Bag = () => {
     <div className={style.bag}>
       <h1 className={style.title}>Корзина</h1>
       <div className={style.subtitle}>
-        <span className={style.main}>Головна - </span> 
+        <NavLink to='/'><span className={style.main}>Головна - </span></NavLink> 
         <span className={style.minor}>Корзина</span>
       </div>
               

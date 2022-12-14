@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Map from '../Map';
 
 import style from './Contacts.module.css'
@@ -9,7 +10,7 @@ const Contacts = () => {
       <div className={style.header}> 
         <h1 className={style.title}>Контакти</h1>
         <div className={style.subtitle}>
-          <span className={style.main}>Головна - </span> 
+          <NavLink to='/'><span className={style.main}>Головна - </span></NavLink> 
           <span className={style.minor}>Контакти</span>
         </div>
       </div>

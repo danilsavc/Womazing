@@ -3,7 +3,7 @@ import React from 'react';
 import style from './OneItem.module.css'
 
 import Sizes from './Sizes';
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const OneItem = () => {
@@ -29,14 +29,14 @@ const OneItem = () => {
   }, [id])
 
   if (!clothers) {
-    return 'Загрузка...'
+    return <div className={style.loading}><span>Загрузка...</span></div>
   }
 
   return (
     <div className={style.OneItem}>
       <h1 className={style.title}>{clothers.title}</h1>
       <div className={style.subtitle}>
-        <span className={style.main}>Головна - </span> 
+        <NavLink to='/'><span className={style.main}>Головна - </span></NavLink> 
         <span className={style.minor}>Магазин</span>
       </div>
       <div className={style.item}>
