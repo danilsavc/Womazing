@@ -29,18 +29,18 @@ const Footer = () => {
           <NavLink to='/shop' className={({isActive}) => isActive ? `${style.link} ${style.linkActive}` : `${style.link}`}>Магазин</NavLink>
           <NavLink to='/about-brand' className={({isActive}) => isActive ? `${style.link} ${style.linkActive}` : `${style.link}`}>Про бренд</NavLink>
           <NavLink to='/contacts' className={({isActive}) => isActive ? `${style.link} ${style.linkActive}` : `${style.link}`}>Контакти</NavLink>
-      </nav>
+        </nav>
 
-      <div className={style.information}>
-        <span className={style.telephone}>+380676767676</span>
-        <span className={style.email}>danilsavc@gmail.com</span>
-        <div className={style.socialNetwork}>
-          <img className={style.sn} src={insta} alt="" />
-          <img className={style.sn} src={facebook} alt="" />
-          <img className={style.sn} src={twitter} alt="" />
+        <div className={style.information}>
+          <span className={style.telephone}>+380676767676</span>
+          <span className={style.email}>danilsavc@gmail.com</span>
+          <div className={style.socialNetwork}>
+            <img className={style.sn} src={insta} alt="" />
+            <img className={style.sn} src={facebook} alt="" />
+            <img className={style.sn} src={twitter} alt="" />
+          </div>
+          <img className={style.visa} src={visa} alt="" />
         </div>
-        <img className={style.visa} src={visa} alt="" />
-      </div>
 
       </div>
     </footer>

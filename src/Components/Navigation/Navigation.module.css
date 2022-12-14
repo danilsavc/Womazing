@@ -15,6 +15,11 @@
 
 .header_logo {
   grid-area: logo;
+  transition: ease 0.5s;
+}
+
+.header_logo:hover {
+  opacity: 0.5;
 }
 
 .header_nav {
@@ -27,7 +32,6 @@
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  line-height: 140%;
   letter-spacing: 0.02em;
   color: #000000;
   margin-right: 45px;
@@ -44,7 +48,7 @@
 
 .link:hover {
   color: #6E9C9F;
-  font-weight: 700;
+
 }
 
 .header_contacts {
@@ -66,6 +70,7 @@
 
 .telephone {
   cursor: pointer;
+  transition: ease 0.5s;
 }
 
 .telephone:hover {
@@ -86,11 +91,16 @@
   display: grid;
   grid-template-rows: 15px 1fr;
   grid-template-areas: "bagCount" "img";
+  transition: ease 0.5s;
 }
 
 .header_bag img {
   grid-area: img;
   margin-bottom: 15px;
+}
+
+.header_bag:hover {
+  opacity: 0.5;
 }
 
 .bagCount {

@@ -94,7 +94,6 @@
 }
 
 .link:hover {
-  font-weight: 700;
   color: #6E9C9F;
 }
 
@@ -105,4 +104,67 @@
 
 .sn {
   margin-right: 20px;
+}
+
+@media (max-width: 1700px) {
+  .terms_item {
+    text-align: end;
+  }
+
+  .logo,
+  .terms {
+    justify-self: flex-end;
+  }
+
+  .information {
+    justify-self: flex-start;
+  }
+}
+
+@media (max-width: 1250px) {
+  .header_nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .link {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header_nav {
+    margin-left: 20px;
+  }
+
+  .telephone {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 50px 100px 150px;
+    grid-template-areas:
+      ". ."
+      "logo logo"
+      "header_nav header_nav"
+      "terms information";
+  }
+
+  .logo {
+    justify-self: center;
+  }
+
+  .terms {
+    justify-self: flex-start;
+  }
+
+  .information {
+    justify-self: flex-end;
+  }
 }
