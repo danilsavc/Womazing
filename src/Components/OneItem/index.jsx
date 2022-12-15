@@ -5,6 +5,7 @@ import style from './OneItem.module.css'
 import Sizes from './Sizes';
 import { NavLink, useParams } from 'react-router-dom';
 import axios from 'axios';
+import Loading from './Loading';
 
 const OneItem = () => {
   const [clothers, setClothers] = React.useState();
@@ -29,7 +30,7 @@ const OneItem = () => {
   }, [id])
 
   if (!clothers) {
-    return <div className={style.loading}><span>Загрузка...</span></div>
+    return <Loading/>
   }
 
   return (

@@ -24,6 +24,9 @@ const Bag = () => {
         </div>
 
         <BagItem/>
+        <BagItem/>
+        <BagItem/>
+        <BagItem/>
       </div>
       <div className={style.order}>
         <div className={style.total}><span>Всього: $ 129</span></div>
