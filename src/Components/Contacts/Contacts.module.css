@@ -186,3 +186,44 @@
   border: 1px solid #6E9C9F;
   transition: 0.5s ease;
 }
+
+@media (max-width: 850px) {
+  .details {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 40px);
+    grid-template-areas:
+      "telephone email"
+      "telephone_item email_item"
+      "adress ."
+      "adress_item .";
+  }
+}
+
+@media (max-width: 500px) {
+  .details {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 40px);
+    grid-template-areas:
+      "telephone"
+      "telephone_item"
+      "email"
+      "email_item"
+      "adress"
+      "adress_item";
+  }
+
+  .title_form {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn {
+    width: 200px;
+    justify-self: center;
+  }
+
+  .input {
+    width: 300px;
+  }
+}
