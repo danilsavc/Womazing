@@ -115,3 +115,68 @@
   grid-area: text;
   align-self: center;
 }
+
+@media (max-width: 900px) {
+  .mainBlock {
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "img text"
+      "btn btn";
+  }
+
+  .img {
+    justify-self: center;
+  }
+
+  .btn {
+    margin-top: 20px;
+    margin-left: 150px;
+  }
+}
+
+@media (max-width: 550px) {
+  .btn {
+    margin-left: 100px;
+  }
+
+  .orderTitle {
+    font-size: 22px;
+  }
+
+  .orderSubtitle {
+    font-size: 15px;
+  }
+
+  .text {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "orderTitle" "orderSubtitle";
+    gap: 30px;
+  }
+
+  .mainBlock {
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .btn {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn {
+    margin-left: 30px;
+  }
+
+  .orderTitle {
+    font-size: 20px;
+  }
+
+  .orderSubtitle {
+    font-size: 13px;
+  }
+}

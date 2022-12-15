@@ -70,3 +70,14 @@
   grid-area: payment;
   align-self: center;
 }
+
+@media (max-width: 850px) {
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "dataUser"
+      "adressUser"
+      "payment";
+  }
+}
