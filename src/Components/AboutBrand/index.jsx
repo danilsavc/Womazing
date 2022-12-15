@@ -27,7 +27,7 @@ const AboutBrand = () => {
       <div className={style.container}>
         {aboutDream.map((item, index) => (
           <div key={index} className={style.img}>
-            <img src={item.img} alt="" />
+            <img className={style.img} src={item.img} alt="" />
           </div>
         ))}
         <div className={style.text1}>

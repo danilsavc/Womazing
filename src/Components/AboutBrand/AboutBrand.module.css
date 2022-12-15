@@ -123,3 +123,72 @@
   background-color: #FFFFFF;
   color: #6E9C9F;
 }
+
+@media (max-width: 1050px) {
+  .container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .img {
+    width: 402px;
+    height: 507px;
+  }
+}
+
+@media (max-width: 890px) {
+  .img {
+    width: 352px;
+    height: 457px;
+  }
+}
+
+@media (max-width: 780px) {
+  .img {
+    width: 302px;
+    height: 407px;
+  }
+}
+
+@media (max-width: 680px) {
+  .img {
+    width: 252px;
+    height: 357px;
+  }
+
+  .main {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 580px) {
+  .img {
+    width: 202px;
+    height: 307px;
+  }
+
+  .main {
+    font-size: 10px;
+  }
+
+  .button_open {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .img {
+    width: 152px;
+    height: 257px;
+  }
+
+  .main {
+    font-size: 8px;
+  }
+
+  .text1_title,
+  .text2_title {
+    font-size: 20px;
+  }
+}
