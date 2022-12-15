@@ -72,3 +72,12 @@
   letter-spacing: 0.02em;
   color: #998E78;
 }
+
+@media (max-width: 400px) {
+
+  .backgroundHover,
+  .content {
+    width: 320px;
+    height: 458px;
+  }
+}

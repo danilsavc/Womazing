@@ -65,3 +65,40 @@
   justify-self: center;
   align-self: center;
 }
+
+@media (max-width: 1200px) {
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+    column-gap: 100px;
+  }
+}
+
+@media (max-width: 880px) {
+  .items {
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 775px) {
+  .items {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .items {
+    justify-self: flex-start;
+  }
+
+  .pagination {
+    justify-self: flex-start;
+  }
+}
+
+@media (max-width: 400px) {
+  .items {
+    justify-self: center;
+  }
+}
