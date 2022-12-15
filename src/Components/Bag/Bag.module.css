@@ -64,6 +64,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 52px;
+  gap: 20px;
 }
 
 .order {
@@ -120,4 +121,31 @@
   background: #FFFFFF;
   color: #6E9C9F;
   border: 1px solid #6E9C9F;
+}
+
+@media (max-width: 580px) {
+
+  .orderBtn,
+  .total {
+    width: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .orderBtn,
+  .total {
+    width: 150px;
+    font-size: 15px;
+  }
+
+  .infoBar {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 420px) {
+  .infoBar {
+    font-size: 15px;
+  }
 }

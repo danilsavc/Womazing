@@ -11,6 +11,8 @@
   line-height: 140%;
   letter-spacing: 0.02em;
   color: #000000;
+
+  gap: 20px;
 }
 
 .good_item {
@@ -19,7 +21,7 @@
   grid-template-rows: 1fr;
   grid-template-areas: "cancel img good_name";
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .img {
@@ -47,4 +49,40 @@
 .good_name {
   grid-area: good_name;
   justify-self: start;
+}
+
+@media (max-width: 1100px) {
+  .img {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 950px) {
+  .img {
+    width: 50px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 660px) {
+  .good_item {
+    grid-template-columns: 12px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "cancel img" "good_name good_name";
+  }
+
+  .img {
+    justify-self: start;
+  }
+
+  .good_name {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 500px) {
+  .good {
+    font-size: 15px;
+  }
 }
