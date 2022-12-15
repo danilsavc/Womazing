@@ -290,3 +290,20 @@
   color: #fff;
   transition: 0.5s ease;
 }
+
+@media (max-width:400px) {
+
+  .inputs,
+  .title {
+    justify-self: center;
+  }
+
+  .btn,
+  .btn_success {
+    width: 300px;
+  }
+
+  .input {
+    width: 300px;
+  }
+}

@@ -30,3 +30,15 @@
 .content.active {
   transform: scale(1);
 }
+
+@media (max-width: 1200px) {
+  .modal {
+    z-index: 4;
+  }
+}
+
+@media (max-width: 550px) {
+  .content {
+    min-width: 300px;
+  }
+}
