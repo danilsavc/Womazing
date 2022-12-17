@@ -2,8 +2,8 @@ import React from 'react';
 
 import style from './Sizes.module.css'
 
-const Sizes = ({ value, onChangeSize }) => {
-  const sizeItem = ['XS', 'S', 'M', 'L', 'XL']
+const Sizes = ({ value, onChangeSize, sizeItem }) => {
+  
 
   return (
     <div className={style.sizes}>

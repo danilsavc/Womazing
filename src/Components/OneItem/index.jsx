@@ -1,20 +1,43 @@
 import React from 'react';
+import { NavLink, useParams } from 'react-router-dom';
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { addItem } from '../../redux/slices/bagSlice';
 
 import style from './OneItem.module.css'
 
 import Sizes from './Sizes';
-import { NavLink, useParams } from 'react-router-dom';
-import axios from 'axios';
 import Loading from './Loading';
 
+const sizeItem = ['XS', 'S', 'M', 'L', 'XL']
+
 const OneItem = () => {
-  const [clothers, setClothers] = React.useState();
+  const dispatch = useDispatch();
   const { id } = useParams();
+
+  const bagItem = useSelector((state) => state.bag.items.find((obj) => obj.id === id))
+
+  const addedCount = bagItem ? bagItem.count : 0
+
+  const [clothers, setClothers] = React.useState();
+  
 
   const [size, setSize] = React.useState(0)
 
   const onChangeSize = (index) => {
     setSize(index)
+  }
+
+  const onClickAdd = () => {
+    const item = {
+      id,
+      title: clothers.title,
+      img: clothers.girl,
+      price: clothers.price,
+      size: sizeItem[size],
+    }
+    dispatch(addItem(item))
   }
 
   React.useEffect(() => {
@@ -44,11 +67,12 @@ const OneItem = () => {
         <img className={style.img} src={clothers.girl} alt="item" />
         <span className={style.price}>$ {clothers.price}</span>
         <div className={style.sizes}>
-          <Sizes value={size} onChangeSize={onChangeSize}/>
+          <Sizes value={size} onChangeSize={onChangeSize} sizeItem={sizeItem}/>
         </div>
         <div className={style.btn}>
-          <div className={style.addInBag}><span>Додати в кошик</span></div>
-          <div className={style.countThings}>0</div>
+          <div onClick={onClickAdd} className={style.addInBag}><span>Додати в кошик</span></div>
+          {addedCount > 0 && <div className={style.countThings}>{addedCount}</div>}
+          
         </div>
         
       </div>

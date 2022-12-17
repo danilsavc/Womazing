@@ -1,11 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import style from './Bag.module.css'
 
 import BagItem from './BagItem';
+import EmptyBag from './EmptyBag';
 
 const Bag = () => {
+  const items = useSelector((state) => state.bag.items)
+
+  const {totalPrice} = useSelector(state => state.bag)
+
+  if(!totalPrice) {
+    return <EmptyBag />
+  }
+
   return (
     <div className={style.bag}>
       <h1 className={style.title}>Корзина</h1>
@@ -23,13 +33,10 @@ const Bag = () => {
           <span className={style.all}>Усього</span>
         </div>
 
-        <BagItem/>
-        <BagItem/>
-        <BagItem/>
-        <BagItem/>
+        {items.map((item, index) => <BagItem key={index} {...item} />)}
       </div>
       <div className={style.order}>
-        <div className={style.total}><span>Всього: $ 129</span></div>
+        <div className={style.total}><span>Всього: $ {totalPrice}</span></div>
         <NavLink to='/bag/order'><div className={style.orderBtn}><span>Оформити замовлення</span></div></NavLink>
       </div>
     </div>

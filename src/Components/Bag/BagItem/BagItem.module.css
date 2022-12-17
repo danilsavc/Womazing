@@ -24,12 +24,11 @@
   gap: 20px;
 }
 
-.img {
+.img img {
   grid-area: img;
   justify-self: center;
-  width: 136px;
-  height: 205px;
-  background-color: blue;
+  max-width: 136px;
+  max-height: 205px;
 }
 
 .cancel {
@@ -51,15 +50,38 @@
   justify-self: start;
 }
 
+.good_amount {
+  display: grid;
+  grid-template-areas: "minus amount plus";
+}
+
+.good_amount span {
+  grid-area: amount;
+}
+
+.plus {
+  grid-area: plus;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.plus,
+.minus {
+  user-select: none;
+  cursor: pointer;
+}
+
 @media (max-width: 1100px) {
-  .img {
+  .img img {
     width: 100px;
     height: 150px;
   }
 }
 
 @media (max-width: 950px) {
-  .img {
+  .img img {
     width: 50px;
     height: 70px;
   }
@@ -72,12 +94,13 @@
     grid-template-areas: "cancel img" "good_name good_name";
   }
 
-  .img {
+  .img img {
     justify-self: start;
   }
 
   .good_name {
     align-self: flex-start;
+    font-size: 10px;
   }
 }
 
@@ -85,4 +108,5 @@
   .good {
     font-size: 15px;
   }
+
 }

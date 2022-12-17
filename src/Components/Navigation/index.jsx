@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 
 import style from "../Navigation/Navigation.module.css";
 
@@ -10,7 +10,11 @@ import bag from "../../Assets/Img/bag.svg";
 import PopUpCallBack from "../PopUpCallBack";
 import PopUpSuccess from "../PopUpCallBack/PopUpSuccess";
 
+
 const Navigation = () => {
+  const {items} = useSelector(state => state.bag)
+  const totalCount = items.reduce((sum, item) => sum + item.count, 0)
+
   const [modalActive, setModalActive] = React.useState(false)
   const [modalSuccess, setModalSucces] = React.useState(false)
 
@@ -42,7 +46,7 @@ const Navigation = () => {
           <span className={style.item}>+380676767676</span>
         </div>
         {location.pathname !== '/bag' && (
-          <NavLink to='/bag' className={style.header_bag}><img src={bag} alt='bag' /><div className={style.bagCount}>1</div></NavLink>
+          <NavLink to='/bag' className={style.header_bag}><img src={bag} alt='bag' /><div className={style.bagCount}>{totalCount}</div></NavLink>
         )}
         
       </header>
